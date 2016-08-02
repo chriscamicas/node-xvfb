@@ -29,6 +29,7 @@ RUN useradd -ms /bin/bash node -G root \
     fontconfig-config \
     ttf-mscorefonts-installer \
     xauth \
+    libxss1 \
     --no-install-recommends \
   && apt-get remove -y $BUILD_DEPS \
   && apt-get autoclean -y \
