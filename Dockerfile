@@ -17,9 +17,9 @@ RUN useradd -ms /bin/bash node -G root \
   && apt-get install -y apt-utils \
   && apt-get install -y \
     $BUILD_DEPS \
- 	gcc-multilib \
-	g++-multilib \
-	xvfb \
+   	gcc-multilib \
+  	g++-multilib \
+  	xvfb \
     x11-xkb-utils \
     xfonts-100dpi \
     xfonts-75dpi \
@@ -27,12 +27,11 @@ RUN useradd -ms /bin/bash node -G root \
     xfonts-cyrillic \
     x11-apps \
     fontconfig-config \
-    ttf-mscorefonts-installer \
     xauth \
     libxss1 \
     --no-install-recommends \
   && apt-get remove -y $BUILD_DEPS \
   && apt-get autoclean -y \
-  && rm -rf /var/lib/api/lists/*
+  && rm -rf /var/lib/apt/lists/*
 
 CMD ["node"]
