@@ -1,7 +1,7 @@
 FROM node:slim
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV BUILD_DEPS="clang libdbus-1-dev libgtk2.0-dev libnotify-dev libgnome-keyring-dev libgconf2-dev libasound2-dev libcap-dev libcups2-dev libxtst-dev libxss1 libnss3-dev"
+ENV BUILD_DEPS="clang libdbus-1-dev libgtk2.0-dev libnotify-dev libgnome-keyring-dev libgconf2-dev libasound2-dev libcap-dev libcups2-dev libxtst-dev libnss3-dev"
 
 RUN useradd -ms /bin/bash node -G root \
   && echo "deb http://httpredir.debian.org/debian jessie main contrib non-free" \
